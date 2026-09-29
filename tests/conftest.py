@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 from playwright.sync_api import Browser, BrowserContext, Page, sync_playwright
 
+from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 from utils.config import Config
 from utils.logger import get_logger
@@ -50,6 +51,7 @@ def logged_in_page(page: Page) -> Page:
     login = LoginPage(page)
     login.open()
     login.login(Users.STANDARD.username, Users.STANDARD.password)
+    InventoryPage(page).wait_until_loaded()
     return page
 
 

@@ -1,6 +1,6 @@
 """Inventory (products) page object."""
 
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 
 from pages.base_page import BasePage
 
@@ -23,7 +23,13 @@ class InventoryPage(BasePage):
     def get_title(self) -> str:
         return self.get_text(self.TITLE)
 
+    def wait_until_loaded(self) -> None:
+        """Wait for the inventory page and its first product to render."""
+        expect(self.page.locator(self.TITLE)).to_have_text("Products")
+        expect(self.page.locator(self.ITEMS).first).to_be_visible()
+
     def get_item_count(self) -> int:
+        self.wait_until_loaded()
         return self.page.locator(self.ITEMS).count()
 
     def add_first_item(self) -> None:

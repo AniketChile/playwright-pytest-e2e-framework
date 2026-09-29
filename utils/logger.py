@@ -1,4 +1,5 @@
 """Centralized logger factory."""
+
 import logging
 import sys
 from pathlib import Path

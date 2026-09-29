@@ -1,4 +1,5 @@
 """Login test suite."""
+
 import pytest
 
 from pages.inventory_page import InventoryPage

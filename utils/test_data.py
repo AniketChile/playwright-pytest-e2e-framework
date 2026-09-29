@@ -1,4 +1,5 @@
 """Static test data - no credentials in test files."""
+
 from dataclasses import dataclass
 
 

@@ -1,6 +1,6 @@
 # Playwright + Pytest E2E Automation Framework
 
-![CI](https://github.com/<your-username>/playwright-pytest-e2e-framework/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/AniketChile/playwright-pytest-e2e-framework/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)
 ![Playwright](https://img.shields.io/badge/playwright-1.44-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
